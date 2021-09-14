@@ -25,16 +25,14 @@ No IDE REMIX crie um novo arquivo e nomeie-o de _rating.sol_
 - 2º Passo:
 Copie o conteudo do arquivo _smartcontract.sol_ dentro da pasta **trip-rating** e então cole no arquivo _rating.sol_ criado no IDE REMIX.
 
+No menu do lado esquerdo, você terá a opção de compilação.
+Deixe o menu configurado conforme abaixo:
 
-deploy do Smart Contract. Será necessário utilizar o Ganache, caso 
-você não tenha instalado em sua máquina, pode instalar por esse link. Outra ferramenta que 
-vamos utilizar, é a IDE do Remix, diretamente na internet. Acesse-a por meio desse link. Dentro 
-dos arquivos do projeto, você vai encontrar o arquivo BibliotecaDApp.zip. Descompacte esse 
-arquivo e dentro dele terá um arquivo zip chamado SmartContract. Descompacte também esse 
-arquivo e você terá o arquivo Livraria.sol, o Smart Contract desta aplicação. Abrindo a IDE do 
-Remix, clique na opção Create New File e dê o nome de Biblioteca.sol. Feito isso, basta copiar 
-todo o código do arquivo Livraria.sol, para o arquivo que foi criado na IDE Remix. Teremos algo 
-similar a isso
+
+
+
+Antes de clicar em deploy precisamos fazer alguns ajustes, primeiro abra o Ganache e clique em Quickstart Blockchain:
+
 
 
 

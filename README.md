@@ -25,13 +25,29 @@ No IDE REMIX crie um novo arquivo e nomeie-o de _rating.sol_
 - 2º Passo:
 Copie o conteudo do arquivo _smartcontract.sol_ dentro da pasta **trip-rating** e então cole no arquivo _rating.sol_ criado no IDE REMIX.
 
-No menu do lado esquerdo, você terá a opção de compilação.
-Deixe o menu configurado conforme abaixo:
+No menu do lado esquerdo você terá a opção de compilação, deixe o menu configurado conforme abaixo:
+
 
 
 
 
 Antes de clicar em deploy precisamos fazer alguns ajustes, primeiro abra o Ganache e clique em Quickstart Blockchain:
+
+
+
+
+
+Assim que o Ganache for iniciado, voltamos para a IDE Remix e vamos selecionar a terceira opção do menu Esquerdo para realizar o deploy. 
+Na primeira opção Environment, está selecionado o item JavaScript VM, vamos alterar para Web3 Provider para que possamos informar nosso endereço do Ganache. 
+Feito isso, clique em Ok e aguarde o processamento até que a integração entre IDE Remix e Ganache seja finalizada. Sua tela deve estar assim:
+
+
+
+
+
+
+Precisamos confirmar se a transação foi gravada no Ganache. Abra a aba Transactions e verifique se a transação foi registrada:
+
 
 
 

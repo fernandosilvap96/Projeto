@@ -1,7 +1,7 @@
 <h1 align="center">Projeto - Avaliação de pontos turísticos usando a tecnologia Blockchain</h1>
 
 Aprenda como desenvolver uma aplicação descentralizada (DApp) utilizando 
-a as tecnologias Solidity, Ganache, Metamask, Web3js e React. 
+a as tecnologias Solidity, Ganache, Metamask, Web3js e React. **TRUFFLE ao inves do remix?**
 
 Abaixo o Roadmap que ilustra as etapas do projeto.
 

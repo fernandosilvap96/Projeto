@@ -19,10 +19,10 @@ Você pode encontrar o arquivo trip-rating contendo o smart contract nesse link.
 
 Para iniciar o projeto precisamos dar deploy do smart contract obtido acima, primeiro acesse o site do IDE Remix por esse link.
 
--1º Passo:
+- 1º Passo:
 No IDE REMIX crie um novo arquivo e nomeie-o de rating.sol
 
--2º Passo:
+- 2º Passo:
 copie o conteudo do arquivo smartcontract.sol dentro da pasta trip-rating e então cole no arquivo rating.sol criado no IDE REMIX.
 
 

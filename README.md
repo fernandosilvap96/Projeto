@@ -46,17 +46,26 @@ Feito isso, clique em Ok e aguarde o processamento até que a integração entre
 
 
 
+
 Precisamos confirmar se a transação foi gravada no Ganache. Abra a aba Transactions e verifique se a transação foi registrada:
+
+
+
 
 
 
 
 Se você chegou até aqui parabéns, finalizamos o back-end da nossa aplicação. 
 
-Precisamos configurar o front-end, para isso copie o endereço do campo CREATED CONTRACT ADDRESS, pois vamos precisar informar esse endereço dentro do React.
-Vamos precisar também copiar o ABI gerado do deploy que realizamos. No IDE REMIX, selecione novamente a segunda opção Solidity Compiler do menu esquerdo e 
+Precisamos criar a interação do back-end com o front-end, para isso copie o endereço do campo CREATED CONTRACT ADDRESS do Ganache, pois vamos precisar informar esse endereço dentro do React. Vamos precisar também copiar o ABI gerado do deploy que realizamos no IDE REMIX, selecione novamente a segunda opção Solidity Compiler do menu esquerdo e 
 então clique no link ABI:
 
+
+
+
+Após copiar os dois dados, guarde em um arquivo de texto e então finalizamos o deploy do Smart Contract na Blockchain.
+
+Sempre que for feito um novo deploy do Smart Contract, copie o arquivo ABI.json do IDE REMIX e o valor do campo CREATED CONTRACT ADDRESS do Ganache, pois temos que informá-los no React.
 
 
 

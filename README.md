@@ -3,7 +3,7 @@
 Esse é um projeto para desenvolver uma aplicação descentralizada (DApp) utilizando 
 a as tecnologias Solidity, Ganache, Metamask, Web3js e React. Abaixo o Roadmap que ilustra as etapas do projeto.
 
-<img src="roadmap.jpg" alt="roadmap" width="1100" height="650">
+<img src="roadmap.jpg" alt="roadmap" width="1100" height="550">
 
 
 

@@ -71,8 +71,22 @@ Após copiar os dois dados, guarde em um arquivo de texto e então finalizamos o
 
 Sempre que for feito um novo deploy do smart contract, copie o arquivo ABI.json do IDE REMIX e o valor do campo CREATED CONTRACT ADDRESS do Ganache, pois temos que informá-los no React.
 
+
 ## Configuração da aplicação Web
 
+O código com o projeto React está dentro arquivo **trip-rating**, Para instalar as dependências do _package.json_ será necessário navegar até o diretório do projeto pelo terminal e digitar o comando:
+``
+npm install
+``
+
+Precisamos agora modificar alguns arquvios dentro de src/app, vamos até o 
+diretório blockchain, onde teremos os arquivos contractABI.json e o web3.service.ts, os dois 
+arquivos que precisamos modificar. Abra o arquivo contractABI.json, apague todas as 
+informações contidas e cole o código ABI do deploy que você realizou no Remix. A outra 
+alteração que precisamos fazer, está no arquivo web3.service.ts. Na linha 16, onde tivermos 
+private contractAddress = "0xAc17AF58D1F9f5D79bb8816bf5238DF4A920ef33", você vai 
+substituir esse valor, pelo que foi gerado no campo CREATED CONTRACT ADDRESS na 
+transaction do Ganache, conforme vimos anteriormente.
 
 
 

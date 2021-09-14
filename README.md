@@ -15,15 +15,15 @@ A aplicação vai simular um sistema de avaliação de pontos turísticos, onde 
 
 ## Deploy do Smart Contract
 
-Você pode encontrar o arquivo trip-rating contendo o smart contract nesse link. 
+Você pode encontrar o arquivo **trip-rating** contendo o smart contract nesse link. 
 
 Para iniciar o projeto precisamos dar deploy do smart contract obtido acima, primeiro acesse o site do IDE Remix por esse link.
 
 - 1º Passo:
-No IDE REMIX crie um novo arquivo e nomeie-o de rating.sol
+No IDE REMIX crie um novo arquivo e nomeie-o de _rating.sol_
 
 - 2º Passo:
-copie o conteudo do arquivo smartcontract.sol dentro da pasta trip-rating e então cole no arquivo rating.sol criado no IDE REMIX.
+copie o conteudo do arquivo _smartcontract.sol_ dentro da pasta **trip-rating** e então cole no arquivo _rating.sol_ criado no IDE REMIX.
 
 
 deploy do Smart Contract. Será necessário utilizar o Ganache, caso 

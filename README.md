@@ -17,7 +17,7 @@ A aplicação vai simular um sistema de avaliação de pontos turísticos, onde 
 
 Você pode encontrar o arquivo **trip-rating** contendo o smart contract nesse link. 
 
-Para iniciar o projeto precisamos dar deploy do smart contract obtido acima, primeiro acesse o site do IDE Remix por esse link.
+Para iniciar o projeto precisamos fazer o deploy do smart contract obtido acima, primeiro acesse o site do IDE Remix por esse link.
 
 - 1º Passo:
 No IDE REMIX crie um novo arquivo e nomeie-o de _rating.sol_
@@ -47,6 +47,26 @@ Feito isso, clique em Ok e aguarde o processamento até que a integração entre
 
 
 Precisamos confirmar se a transação foi gravada no Ganache. Abra a aba Transactions e verifique se a transação foi registrada:
+
+
+
+
+Se você chegou até aqui parabéns, finalizamos o back-end da nossa aplicação. 
+
+Precisamos configurar o front-end, para isso copie o endereço do campo CREATED CONTRACT ADDRESS, pois vamos precisar informar esse endereço dentro do React.
+Vamos precisar também copiar o ABI gerado do deploy que realizamos. No IDE REMIX, selecione novamente a segunda opção Solidity Compiler do menu esquerdo e 
+então clique no link ABI:
+
+
+
+
+
+
+
+
+
+
+
 
 
 

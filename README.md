@@ -13,8 +13,9 @@ Utilizaremos o Metamask para fazer a comunicação com a Blockchain e o React pa
 A aplicação vai simular um sistema de avaliação de pontos turísticos, onde qualquer usuário poderá cadastrar um novo ponto turístico usando como base a localização no google maps. Na avaliação o usuário deverá considerar alguns aspectos como paisagem, preço, segurança, acessibilidade, um breve resumo da experiência e por fim se recomenda ou não a visita.
 
 
-## Deploy do Smart Contract
+## Back-end
 
+Para o projeto será necessário instalar o Ganache(link), Nodejs(link) e baixar o smart contract.
 Você pode encontrar o arquivo **trip-rating** contendo o smart contract nesse link. 
 
 Para iniciar o projeto precisamos fazer o deploy do smart contract obtido acima, primeiro acesse o site do IDE Remix por esse link.
@@ -63,9 +64,12 @@ então clique no link ABI:
 
 
 
-Após copiar os dois dados, guarde em um arquivo de texto e então finalizamos o deploy do Smart Contract na Blockchain.
 
-Sempre que for feito um novo deploy do Smart Contract, copie o arquivo ABI.json do IDE REMIX e o valor do campo CREATED CONTRACT ADDRESS do Ganache, pois temos que informá-los no React.
+
+
+Após copiar os dois dados, guarde em um arquivo de texto e então finalizamos o deploy do smart contract na Blockchain.
+
+Sempre que for feito um novo deploy do smart contract, copie o arquivo ABI.json do IDE REMIX e o valor do campo CREATED CONTRACT ADDRESS do Ganache, pois temos que informá-los no React.
 
 
 

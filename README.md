@@ -23,7 +23,7 @@ Para iniciar o projeto precisamos dar deploy do smart contract obtido acima, pri
 No IDE REMIX crie um novo arquivo e nomeie-o de _rating.sol_
 
 - 2º Passo:
-copie o conteudo do arquivo _smartcontract.sol_ dentro da pasta **trip-rating** e então cole no arquivo _rating.sol_ criado no IDE REMIX.
+Copie o conteudo do arquivo _smartcontract.sol_ dentro da pasta **trip-rating** e então cole no arquivo _rating.sol_ criado no IDE REMIX.
 
 
 deploy do Smart Contract. Será necessário utilizar o Ganache, caso 

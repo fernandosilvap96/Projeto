@@ -13,7 +13,7 @@ Utilizaremos o Metamask para fazer a comunicação com a Blockchain e o React pa
 A aplicação vai simular um sistema de avaliação de pontos turísticos, onde qualquer usuário poderá cadastrar um novo ponto turístico usando como base a localização no google maps. Na avaliação o usuário deverá considerar alguns aspectos como paisagem, preço, segurança, acessibilidade, um breve resumo da experiência e por fim se recomenda ou não a visita.
 
 
-##Deploy do Smart Contract
+## Deploy do Smart Contract
 
 Você pode encontrar o arquivo trip-rating contendo o smart contract nesse link. 
 

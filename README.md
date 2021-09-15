@@ -5,7 +5,7 @@ a as tecnologias Solidity, Ganache, Metamask, Web3js e React.
 
 Abaixo o Roadmap que ilustra as etapas do projeto.
 
-<img align="center" src="roadmap.jpg" alt="roadmap" width="900" height="450">
+<img align="center" src="roadmap.jpg" alt="roadmap" width="800" height="450">
 
 No projeto, criaremos um smart contract em solidity e faremos o deploy dele pelo IDE REMIX, o deploy será na Blockchain criada pelo Ganache.
 Utilizaremos o Metamask para fazer a comunicação com a Blockchain e o React para criar a interface web da aplicação. 

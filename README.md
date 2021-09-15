@@ -79,14 +79,9 @@ O código com o projeto React está dentro arquivo **trip-rating**, Para instala
 npm install
 ``
 
-Precisamos agora modificar alguns arquvios dentro de src/app, vamos até o 
-diretório blockchain, onde teremos os arquivos contractABI.json e o web3.service.ts, os dois 
-arquivos que precisamos modificar. Abra o arquivo contractABI.json, apague todas as 
-informações contidas e cole o código ABI do deploy que você realizou no Remix. A outra 
-alteração que precisamos fazer, está no arquivo web3.service.ts. Na linha 16, onde tivermos 
-private contractAddress = "0xAc17AF58D1F9f5D79bb8816bf5238DF4A920ef33", você vai 
-substituir esse valor, pelo que foi gerado no campo CREATED CONTRACT ADDRESS na 
-transaction do Ganache, conforme vimos anteriormente.
+Precisamos agora modificar alguns arquvios dentro de src/app, no diretório **blockchain** teremos os arquivos _contractABI.json_ e o _web3.service.ts_, os dois arquivos que precisamos modificar. 
+
+Abra o arquivo _contractABI.json_, apague todas as informações contidas e cole o código ABI do deploy que você realizou no Remix. A outra alteração que precisamos fazer, está no arquivo _web3.service.ts_. Na linha 16, onde tivermos  private contractAddress = "0xAc17AF58D1F9f5D79bb8816bf5238DF4A920ef33", você vai substituir esse valor, pelo que foi gerado no campo CREATED CONTRACT ADDRESS na transaction do Ganache, conforme vimos anteriormente.
 
 
 

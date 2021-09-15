@@ -5,7 +5,7 @@ a as tecnologias Solidity, Ganache, Metamask, Web3js e React.
 
 Abaixo o Roadmap que ilustra as etapas do projeto.
 
-<img align="center" src="roadmap.jpg" alt="roadmap" width="800" height="450">
+<img src="roadmap.jpg" alt="roadmap" width="800" height="450">
 
 No projeto, criaremos um smart contract em solidity e faremos o deploy dele pelo IDE REMIX, o deploy será na Blockchain criada pelo Ganache.
 Utilizaremos o Metamask para fazer a comunicação com a Blockchain e o React para criar a interface web da aplicação. 
@@ -79,9 +79,11 @@ O código com o projeto React está dentro arquivo **trip-rating**, Para instala
 npm install
 ``
 
-Precisamos agora modificar alguns arquvios dentro de src/app, no diretório **blockchain** teremos os arquivos _contractABI.json_ e o _web3.service.ts_, os dois arquivos que precisamos modificar. 
+Antes de executar o comando nós precisamos modificar alguns arquvios dentro de src/app, no diretório **blockchain** teremos os arquivos _contractABI.json_ e o _web3.service.ts_, os dois arquivos que precisamos modificar. 
 
-Abra o arquivo _contractABI.json_, apague todas as informações contidas e cole o código ABI do deploy que você realizou no Remix. A outra alteração que precisamos fazer, está no arquivo _web3.service.ts_. Na linha 16, onde tivermos  private contractAddress = "0xAc17AF58D1F9f5D79bb8816bf5238DF4A920ef33", você vai substituir esse valor, pelo que foi gerado no campo CREATED CONTRACT ADDRESS na transaction do Ganache, conforme vimos anteriormente.
+Abra o arquivo _contractABI.json_, apague todas as informações contidas e cole o código ABI do deploy que você realizou no Remix. A outra alteração que precisamos fazer, está no arquivo _web3.service.ts_. Na linha 16, onde tivermos  private contractAddress = "0xAc17AF58D1F9f5D79bb8816bf5238DF4A920ef33", você vai substituir esse valor, pelo que foi gerado no campo CREATED CONTRACT ADDRESS na transaction do Ganache.
+
+Após realizar as alterações acima, execute o comando ``npm install`` no diretório com a pasta **trip-rating**
 
 
 

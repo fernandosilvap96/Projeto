@@ -83,11 +83,13 @@ Antes de executar o comando nós precisamos modificar alguns arquvios dentro de 
 
 Abra o arquivo _contractABI.json_, apague todas as informações contidas e cole o código ABI do deploy que você realizou no Remix. A outra alteração que precisamos fazer, está no arquivo _web3.service.ts_. Na linha 16, onde tivermos  private contractAddress = "0xAc17AF58D1F9f5D79bb8816bf5238DF4A920ef33", você vai substituir esse valor, pelo que foi gerado no campo CREATED CONTRACT ADDRESS na transaction do Ganache.
 
-Após realizar as alterações acima, execute o comando ``npm install`` no diretório com a pasta **trip-rating**
+Após realizar as alterações acima, execute o comando ``npm install`
 
+Agora use o comando ``npm start``
 
+Com a aplicação web realizada, copie o link da porta onde está nossa aplicação: <a href="http://localhost:4200">http://localhost:4200</a> e cole no navegador.
 
-
+## Metamask e interações Web
 
 
 

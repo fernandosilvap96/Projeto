@@ -83,7 +83,7 @@ Antes de executar o comando nós precisamos modificar alguns arquvios dentro de 
 
 Abra o arquivo _contractABI.json_, apague todas as informações contidas e cole o código ABI do deploy que você realizou no Remix. A outra alteração que precisamos fazer, está no arquivo _web3.service.ts_. Na linha 16, onde tivermos  private contractAddress = "0xAc17AF58D1F9f5D79bb8816bf5238DF4A920ef33", você vai substituir esse valor, pelo que foi gerado no campo CREATED CONTRACT ADDRESS na transaction do Ganache.
 
-Após realizar as alterações acima, execute o comando ``npm install`
+Após realizar as alterações acima, execute o comando ``npm install``
 
 Agora use o comando ``npm start``
 
@@ -91,8 +91,18 @@ Com a aplicação web realizada, copie o link da porta onde está nossa aplicaç
 
 ## Metamask e interações Web
 
+Precisamos copiar a chave privada de duas contas no Ganache, e então ao importarmos uma conta no 
+Metamask, vamos informar essa chave privada.
 
+Faça isso pelo menos uma ou duas vezes com novas contas, para que você possa 
+conseguir interagir entre diferentes contas na aplicação. Em nosso ambiente, fizemos a 
+importação de duas contas.
 
+Certificando de que as contas importadas estão com Ethereum, podemos executar a 
+aplicação no nosso navegador e fazer a interação com o Smart Contract. Ao executar a 
+aplicação teremos poucas informações, pois não fizemos interação nenhuma com a Blockchain 
+ainda. Podemos começar adicionando um livro. Precisamos informar algumas informações: o 
+nome do livro, uma url para a imagem do livro e a categoria do livro. Após clicar em Cadastrar.
 
 
 

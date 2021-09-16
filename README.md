@@ -1,7 +1,6 @@
 <h1 align="center">Projeto - Avaliação de pontos turísticos usando a tecnologia Blockchain</h1>
 
-Aprenda como desenvolver uma aplicação descentralizada (DApp) utilizando 
-a as tecnologias Solidity, Truffle, Ganache, Metamask, Web3js e React.
+Aprenda como desenvolver uma aplicação descentralizada (DApp) utilizando as tecnologias Truffle, Ganache, Metamask, Web3js e React.
 
 Abaixo o Roadmap que ilustra as etapas do projeto.
 
@@ -15,47 +14,42 @@ A aplicação vai simular um sistema de avaliação de pontos turísticos, onde 
 
 ## Deploy do Smart Contract
 
-Para o projeto será necessário instalar o Visual Studio Code(link), Truffle(link), Ganache(link) e baixar o smart contract.
-Você pode encontrar a pasta **projeto-trip** contendo o smart contract nesse link. 
+Para o deploy do projeto será necessário instalar o Visual Studio Code(link), Truffle(link), Ganache(link) e baixar o smart contract.
+Você pode encontrar a pasta **projeto-trip** contendo o smart contract com o nome de _trip.sol_ nesse link. 
 
 Para iniciar o projeto precisamos fazer o deploy do smart contract, siga os passos abaixo no terminal:
 
 - 1º Passo:
-Inicie o truffle: ``truffle init``
-
-- 2º Passo:
 Inicie o Ganache: ``ganache-cli``
 
-- 3º Passo:
+- 2º Passo:
 Crie uma pasta para o projeto: ``mkdir trip-rating``
 
-- 4º Passo:
+- 3º Passo:
 Entre no diretório criado: ``cd trip-rating``
 
-- 5º Passo:
+- 4º Passo:
 No diretório **trip-rating** inicialize o truffle: ``truffle init``
 
-
-- 6º Passo:
+- 5º Passo:
 Abra a pasta **trip-rating** no Visual Studio Code
 
 Note que o truffle criou algumas pastas, seu diretório deve estar assim:
 
 
-- 7º Passo:
+- 6º Passo:
 Coloque o smart contract _trip.sol_ dentro da pasta contracts
 
-
-- 8º Passo:
+- 7º Passo:
 Voltando ao terminal, execute o comando: ``truffle compile``
 
 Note que o truffle criou uma pasta chamada **build**, dentro dela tem 2 arquivos JSON: 
 
 
-- 9º Passo:
+- 8º Passo:
 Crie um arquivo para o deploy dentro da pasta **migrations**, coloque o nome de _2_deploy_contract.js_
 
-- 10º Passo:
+- 9º Passo:
 No arquivo _2_deploy_contract.js_ cole o código abaixo:
 
 ```
@@ -65,7 +59,7 @@ module.exports = function(deployer) {
 }
 ```
 
-- 11º Passo:
+- 10º Passo:
 No arquivo _truffle-config.js_ cole o código abaixo:
 
 ```
@@ -86,7 +80,7 @@ module.exports = {
 }
 ```
 
-- 12º Passo:
+- 11º Passo:
 No terminal, execute o comando: ``truffle migrate``
 
 Se ocorrer tudo certo, receberemos o log abaixo no terminal:

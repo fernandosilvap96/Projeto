@@ -1,13 +1,13 @@
 <h1 align="center">Projeto - Avaliação de pontos turísticos usando a tecnologia Blockchain</h1>
 
 Aprenda como desenvolver uma aplicação descentralizada (DApp) utilizando 
-a as tecnologias Solidity, Ganache, Metamask, Web3js e React.
+a as tecnologias Solidity, Truffle, Ganache, Metamask, Web3js e React.
 
 Abaixo o Roadmap que ilustra as etapas do projeto.
 
 <img src="roadmap.jpg" alt="roadmap" width="800" height="450">
 
-No projeto, criaremos um smart contract em solidity e faremos o deploy dele pelo IDE REMIX, o deploy será na Blockchain criada pelo Ganache.
+No projeto, criaremos um smart contract em solidity e faremos o deploy dele pelo Truffle, o deploy será na Blockchain criada pelo Ganache.
 Utilizaremos o Metamask para fazer a comunicação com a Blockchain e o React para criar a interface web da aplicação. 
 
 A aplicação vai simular um sistema de avaliação de pontos turísticos, onde qualquer usuário poderá cadastrar um novo ponto turístico usando como base a localização no google maps. Na avaliação o usuário deverá considerar alguns aspectos como paisagem, preço, segurança, acessibilidade, um breve resumo da experiência e por fim se recomenda ou não a visita.
@@ -15,32 +15,88 @@ A aplicação vai simular um sistema de avaliação de pontos turísticos, onde 
 
 ## Deploy do Smart Contract
 
-Para o projeto será necessário instalar o Ganache(link), Nodejs(link) e baixar o smart contract.
-Você pode encontrar o arquivo **trip-rating** contendo o smart contract nesse link. 
+Para o projeto será necessário instalar o Visual Studio Code(link), Truffle(link), Ganache(link) e baixar o smart contract.
+Você pode encontrar a pasta **projeto-trip** contendo o smart contract nesse link. 
 
-Para iniciar o projeto precisamos fazer o deploy do smart contract obtido acima, primeiro acesse o site do IDE Remix por esse link.
+Para iniciar o projeto precisamos fazer o deploy do smart contract, siga os passos abaixo no terminal:
 
 - 1º Passo:
-No IDE REMIX crie um novo arquivo e nomeie-o de _rating.sol_
+Inicie o truffle: ``truffle init``
 
 - 2º Passo:
-Copie o conteudo do arquivo _smartcontract.sol_ dentro da pasta **trip-rating** e então cole no arquivo _rating.sol_ criado no IDE REMIX.
+Inicie o Ganache: ``ganache-cli``
 
-No menu do lado esquerdo você terá a opção de compilação, deixe o menu configurado conforme abaixo:
+- 3º Passo:
+Crie uma pasta para o projeto: ``mkdir trip-rating``
 
+- 4º Passo:
+Entre no diretório criado: ``cd trip-rating``
 
-
-
-
-Antes de clicar em deploy precisamos fazer alguns ajustes, primeiro abra o Ganache e clique em Quickstart Blockchain:
-
-
-
+- 5º Passo:
+No diretório **trip-rating** inicialize o truffle: ``truffle init``
 
 
-Assim que o Ganache for iniciado, voltamos para a IDE Remix e vamos selecionar a terceira opção do menu Esquerdo para realizar o deploy. 
-Na primeira opção Environment, está selecionado o item JavaScript VM, vamos alterar para Web3 Provider para que possamos informar nosso endereço do Ganache. 
-Feito isso, clique em Ok e aguarde o processamento até que a integração entre IDE Remix e Ganache seja finalizada. Sua tela deve estar assim:
+- 6º Passo:
+Abra a pasta **trip-rating** no Visual Studio Code
+
+Note que o truffle criou algumas pastas, seu diretório deve estar assim:
+
+
+- 7º Passo:
+Coloque o smart contract _trip.sol_ dentro da pasta contracts
+
+
+- 8º Passo:
+Voltando ao terminal, execute o comando: ``truffle compile``
+
+Note que o truffle criou uma pasta chamada **build**, dentro dela tem 2 arquivos JSON: 
+
+
+- 9º Passo:
+Crie um arquivo para o deploy dentro da pasta **migrations**, coloque o nome de _2_deploy_contract.js_
+
+- 10º Passo:
+No arquivo _2_deploy_contract.js_ cole o código abaixo:
+``
+const Trip = artifacts.require('../contracts/trip.sol');
+module.exports = function(deployer) {
+     deployer.deploy(Trip);
+}
+``
+
+- 11º Passo:
+No arquivo _truffle-config.js_ cole o código abaixo:
+``
+module.exports = {
+    networks: {
+       development: {
+          host: "127.0.0.1",
+          port: 8545, // Porta padrão em que o ganache utiliza
+          network_id: "*"
+       }
+    }, 
+    solc: {
+       optimizer: {
+          enabled: true,
+          runs: 200
+       }
+    }
+}
+``
+
+- 12º Passo:
+No terminal, execute o comando: ``truffle migrate``
+
+Se ocorrer tudo certo, receberemos o log abaixo no terminal:
+
+
+
+
+
+
+Parabéns, você fez o deploy do smart contract
+
+Agora precisamos confirmar se a transação foi gravada no Ganache. Abra a aba Transactions e verifique se a transação foi registrada:
 
 
 
@@ -48,7 +104,9 @@ Feito isso, clique em Ok e aguarde o processamento até que a integração entre
 
 
 
-Precisamos confirmar se a transação foi gravada no Ganache. Abra a aba Transactions e verifique se a transação foi registrada:
+
+
+Precisamos criar a interação do back-end com o front-end, para isso copie o endereço do campo CREATED CONTRACT ADDRESS do Ganache, pois vamos precisar informar esse endereço dentro do React. Vamos precisar também copiar o ABI gerado do deploy que realizamos pelo truffle.
 
 
 
@@ -56,20 +114,7 @@ Precisamos confirmar se a transação foi gravada no Ganache. Abra a aba Transac
 
 
 
-Se você chegou até aqui parabéns, finalizamos o back-end da nossa aplicação. 
 
-Precisamos criar a interação do back-end com o front-end, para isso copie o endereço do campo CREATED CONTRACT ADDRESS do Ganache, pois vamos precisar informar esse endereço dentro do React. Vamos precisar também copiar o ABI gerado do deploy que realizamos no IDE REMIX, selecione novamente a segunda opção Solidity Compiler do menu esquerdo e 
-então clique no link ABI:
-
-
-
-
-
-
-
-Após copiar os dois dados, guarde em um arquivo de texto e então finalizamos o deploy do smart contract na Blockchain.
-
-Sempre que for feito um novo deploy do smart contract, copie o arquivo ABI.json do IDE REMIX e o valor do campo CREATED CONTRACT ADDRESS do Ganache, pois temos que informá-los no React.
 
 
 ## Configuração da aplicação Web

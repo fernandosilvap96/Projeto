@@ -38,7 +38,7 @@ Note que o truffle criou algumas pastas, seu diretório deve estar assim:
 
 
 - 6º Passo:
-Coloque o smart contract _trip.sol_ dentro da pasta contracts
+Coloque o smart contract _trip.sol_ dentro da pasta **contracts**
 
 - 7º Passo:
 Voltando ao terminal, execute o comando: ``truffle compile``

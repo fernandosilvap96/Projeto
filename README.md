@@ -57,6 +57,7 @@ Crie um arquivo para o deploy dentro da pasta **migrations**, coloque o nome de 
 
 - 10º Passo:
 No arquivo _2_deploy_contract.js_ cole o código abaixo:
+
 ``
 const Trip = artifacts.require('../contracts/trip.sol');
 module.exports = function(deployer) {
@@ -66,6 +67,7 @@ module.exports = function(deployer) {
 
 - 11º Passo:
 No arquivo _truffle-config.js_ cole o código abaixo:
+
 ``
 module.exports = {
     networks: {

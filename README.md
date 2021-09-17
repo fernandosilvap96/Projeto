@@ -4,7 +4,7 @@ Aprenda como desenvolver uma aplicação descentralizada (DApp) utilizando as te
 
 Abaixo o Roadmap que ilustra as etapas do projeto.
 
-<img src="roadmap.jpg" alt="roadmap" width="800" height="450">
+<img src="roadmap1.jpg" alt="roadmap" width="800" height="450">
 
 No projeto, criaremos um smart contract em solidity e faremos o deploy dele pelo Truffle, o deploy será na Blockchain criada pelo Ganache.
 Utilizaremos o Metamask para fazer a comunicação com a Blockchain e o React para criar a interface web da aplicação. 
@@ -15,7 +15,7 @@ A aplicação vai simular um sistema de avaliação de pontos turísticos, onde 
 ## Deploy do Smart Contract
 
 Para o deploy do projeto será necessário instalar o Visual Studio Code(link), Truffle(link), Ganache(link) e baixar o smart contract.
-Você pode encontrar a pasta **projeto-trip** contendo o smart contract com o nome de _trip.sol_ nesse link. 
+Você pode encontrar a pasta **projeto-trip** contendo o smart contract com o nome de _viagem.sol_ nesse link. 
 
 Para iniciar o projeto precisamos fazer o deploy do smart contract, siga os passos abaixo no terminal:
 
@@ -38,7 +38,7 @@ Note que o truffle criou algumas pastas, seu diretório deve estar assim:
 
 
 - 6º Passo:
-Coloque o smart contract _trip.sol_ dentro da pasta **contracts**
+Coloque o smart contract _viagem.sol_ dentro da pasta **contracts**
 
 - 7º Passo:
 Voltando ao terminal, execute o comando: ``truffle compile``
@@ -53,9 +53,9 @@ Crie um arquivo para o deploy dentro da pasta **migrations**, coloque o nome de 
 No arquivo _2_deploy_contract.js_ cole o código abaixo:
 
 ```
-const Trip = artifacts.require('../contracts/trip.sol');
+const Viagem = artifacts.require('../contracts/viagem.sol');
 module.exports = function(deployer) {
-     deployer.deploy(Trip);
+     deployer.deploy(Viagem);
 }
 ```
 

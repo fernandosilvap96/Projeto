@@ -4,7 +4,7 @@ Aprenda como desenvolver uma aplicação descentralizada (DApp) utilizando as te
 
 Abaixo o Roadmap que ilustra as etapas do projeto.
 
-<img src="roadmap1.jpg" alt="roadmap" width="800" height="450">
+<img src="Roadmap2.jpg" alt="roadmap" width="800" height="450">
 
 No projeto, criaremos um smart contract em solidity e faremos o deploy dele pelo Truffle, o deploy será na Blockchain criada pelo Ganache.
 Utilizaremos o Metamask para fazer a comunicação com a Blockchain e o React para criar a interface web da aplicação. 

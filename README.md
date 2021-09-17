@@ -19,49 +19,35 @@ Você pode encontrar a pasta **projeto-trip** contendo o smart contract com o no
 
 Para iniciar o projeto precisamos fazer o deploy do smart contract, siga os passos abaixo no terminal:
 
-- 1º Passo:
-Inicie o Ganache: ``ganache-cli``
-
-- 2º Passo:
-Crie uma pasta para o projeto: ``mkdir trip-rating``
-
-- 3º Passo:
-Entre no diretório criado: ``cd trip-rating``
-
-- 4º Passo:
-No diretório **trip-rating** inicialize o truffle: ``truffle init``
-
-- 5º Passo:
-Abra a pasta **trip-rating** no Visual Studio Code
+- 1º Inicie o Ganache:
+```ganache-cli```
+- 2º Crie uma pasta para o projeto:
+```mkdir trip-rating```
+- 3º Entre no diretório criado:
+```cd trip-rating```
+- 4º No diretório **trip-rating** inicialize o truffle:
+```truffle init```
+- 5º Abra a pasta **trip-rating** no Visual Studio Code
 
 Note que o truffle criou algumas pastas, seu diretório deve estar assim:
 
 
-- 6º Passo:
-Coloque o smart contract _viagem.sol_ dentro da pasta **contracts**
-
-- 7º Passo:
-Voltando ao terminal, execute o comando: ``truffle compile``
+- 6º Coloque o smart contract _viagem.sol_ dentro da pasta **contracts**
+- 7º Voltando ao terminal, execute o comando:
+```truffle compile```
 
 Note que o truffle criou uma pasta chamada **build**, dentro dela tem 2 arquivos JSON: 
 
 
-- 8º Passo:
-Crie um arquivo para o deploy dentro da pasta **migrations**, coloque o nome de _2_deploy_contract.js_
-
-- 9º Passo:
-No arquivo _2_deploy_contract.js_ cole o código abaixo:
-
+- 8º Crie um arquivo para o deploy dentro da pasta **migrations**, coloque o nome de _2_deploy_contract.js_
+- 9º No arquivo _2_deploy_contract.js_ cole o código abaixo:
 ```
 const Viagem = artifacts.require('../contracts/viagem.sol');
 module.exports = function(deployer) {
      deployer.deploy(Viagem);
 }
 ```
-
-- 10º Passo:
-No arquivo _truffle-config.js_ cole o código abaixo:
-
+- 10º No arquivo _truffle-config.js_ cole o código abaixo:
 ```
 module.exports = {
     networks: {
@@ -79,9 +65,8 @@ module.exports = {
     }
 }
 ```
-
-- 11º Passo:
-No terminal, execute o comando: ``truffle migrate``
+- 11º No terminal, execute o comando:
+```truffle migrate```
 
 Se ocorrer tudo certo, receberemos o log abaixo no terminal:
 

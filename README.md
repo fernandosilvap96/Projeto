@@ -67,7 +67,7 @@ module.exports = {
     networks: {
        development: {
           host: "127.0.0.1",
-          port: 8545, // Porta padrão em que o ganache utiliza
+          port: 7545, // Porta padrão em que o ganache utiliza
           network_id: "*"
        }
     }, 

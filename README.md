@@ -20,13 +20,21 @@ Você pode encontrar a pasta **projeto-trip** contendo o smart contract com o no
 Para iniciar o projeto precisamos fazer o deploy do smart contract, siga os passos abaixo no terminal:
 
 - 1º Inicie o Ganache:
-```ganache-cli```
+```
+ganache-cli
+```
 - 2º Crie uma pasta para o projeto:
-```mkdir trip-rating```
+```
+mkdir trip-rating
+```
 - 3º Entre no diretório criado:
-```cd trip-rating```
+```
+cd trip-rating
+```
 - 4º No diretório **trip-rating** inicialize o truffle:
-```truffle init```
+```
+truffle init
+```
 - 5º Abra a pasta **trip-rating** no Visual Studio Code
 
 Note que o truffle criou algumas pastas, seu diretório deve estar assim:
@@ -34,7 +42,9 @@ Note que o truffle criou algumas pastas, seu diretório deve estar assim:
 
 - 6º Coloque o smart contract _viagem.sol_ dentro da pasta **contracts**
 - 7º Voltando ao terminal, execute o comando:
-```truffle compile```
+```
+truffle compile
+```
 
 Note que o truffle criou uma pasta chamada **build**, dentro dela tem 2 arquivos JSON: 
 
@@ -66,7 +76,9 @@ module.exports = {
 }
 ```
 - 11º No terminal, execute o comando:
-```truffle migrate```
+```
+truffle migrate
+```
 
 Se ocorrer tudo certo, receberemos o log abaixo no terminal:
 

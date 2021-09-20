@@ -38,6 +38,7 @@ truffle init
 - 5º Abra a pasta **trip-rating** no Visual Studio Code
 
 Note que o truffle criou algumas pastas, seu diretório deve estar assim:
+
 <img src="print1.png" alt="print1">
 
 - 6º Coloque o smart contract _viagem.sol_ dentro da pasta **contracts**

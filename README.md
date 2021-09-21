@@ -15,14 +15,14 @@ A aplicação vai simular um sistema de avaliação de pontos turísticos, onde 
 ## Deploy do Smart Contract
 
 Para o deploy do projeto será necessário instalar o Visual Studio Code(link), Truffle(link), Ganache(link) e baixar o smart contract.
-Você pode encontrar a pasta **projeto-trip** contendo o smart contract com o nome de _viagem.sol_ nesse link. 
+Você pode encontrar a pasta **projeto-trip** contendo o smart contract com o nome de _Viagem.sol_ nesse link. 
 
 Para iniciar o projeto precisamos fazer o deploy do smart contract, siga os passos abaixo no terminal:
 
-- 1º Inicie o Ganache:
-```
-ganache-cli
-```
+- 1º Inicie o Ganache pelo aplicativo e clique em QuickStart:
+
+<img src="print4.png" alt="print4">
+
 - 2º Crie uma pasta para o projeto:
 ```
 mkdir trip-rating
@@ -41,7 +41,7 @@ Note que o truffle criou algumas pastas, seu diretório deve estar assim:
 
 <img src="print1.png" alt="print1">
 
-- 6º Coloque o smart contract _viagem.sol_ dentro da pasta **contracts**
+- 6º Coloque o smart contract _Viagem.sol_ dentro da pasta **contracts**
 - 7º Voltando ao terminal, execute o comando:
 ```
 truffle compile
@@ -49,14 +49,18 @@ truffle compile
 
 Note que o truffle criou uma pasta chamada **build**, dentro dela tem 2 arquivos JSON: 
 
+<img src="print2.png" alt="print2">
 
-- 8º Crie um arquivo para o deploy dentro da pasta **migrations**, coloque o nome de _2_deploy_contract.js_
+- 8º Crie um arquivo para o deploy dentro da pasta **migrations**, coloque o nome de _2_deploy_contract.js_:
+
+<img src="print3.png" alt="print3">
+
 - 9º No arquivo _2_deploy_contract.js_ cole o código abaixo:
 ```
-const Viagem = artifacts.require('../contracts/viagem.sol');
+const Viagem = artifacts.require("ViagemContract");
 module.exports = function(deployer) {
      deployer.deploy(Viagem);
-}
+};
 ```
 - 10º No arquivo _truffle-config.js_ cole o código abaixo:
 ```
@@ -83,22 +87,21 @@ truffle migrate
 
 Se ocorrer tudo certo, receberemos o log abaixo no terminal:
 
-
-
-
+<img src="print5.png" alt="print5">
 
 
 Parabéns, você fez o deploy do smart contract
 
 Agora precisamos confirmar se a transação foi gravada no Ganache. Abra a aba Transactions e verifique se a transação foi registrada:
 
-
-
+<img src="print6.png" alt="print6">
 
 
 ## Criar uma aplicação Web
 
 Crie uma pasta chamada **back-end** e coloque todos os arquivos feito até então:
+
+<img src="print7.png" alt="print7">
 
 
 Para a aplicação Web funcionar precisamos instalar o react, abra um novo terminal e cole o código abaixo:
@@ -110,6 +113,35 @@ Então volte para o diretório **trip-rating** e digite:
 ```
 create-react-app front-end
 ```
+Agora dividimos o projeto em 2 pastas:
+
+<img src="print8.png" alt="print8">
+
+Na pasta **front-end** devemos ter os seguintes arquivos:
+
+<img src="print9.png" alt="print9">
+
+Pelo terminal, dentro do diretório **front-end** digite o código abaixo para testar a aplicação Web recém criada:
+```
+npm start
+```
+Devemos ter a tela assim:
+
+<img src="print10.png" alt="print10">
+
+Agora vamos baixar os pacotes react:
+```
+npm install --save react-router-dom@4.3.1
+```
+```
+npm install --sabe semantic-ui-react
+```
+Precisamos criar uma pasta para os componentes react dentro do diretório **src** e nessa pasta vamos colocar os arquivos do **projeto-trip**:
+
+
+
+
+
 
 
 

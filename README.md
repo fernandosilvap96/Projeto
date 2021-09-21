@@ -1,6 +1,6 @@
 <h1 align="center">Projeto - Avaliação de pontos turísticos usando a tecnologia Blockchain</h1>
 
-Aprenda como desenvolver uma aplicação descentralizada (DApp) utilizando as tecnologias Truffle, Ganache, Metamask, Web3js e React.
+Aprenda como desenvolver uma aplicação descentralizada (DApp) utilizando as tecnologias Truffle, Ganache, Metamask, Web3js React.
 
 Abaixo o Roadmap que ilustra as etapas do projeto.
 
@@ -93,9 +93,24 @@ Parabéns, você fez o deploy do smart contract
 Agora precisamos confirmar se a transação foi gravada no Ganache. Abra a aba Transactions e verifique se a transação foi registrada:
 
 
-## Instanciando Web3js
 
-Abra o arquivo _app.js_ no diretório **projeto-trip/src/** e faça as seguintes alterações:
+
+
+## Criar uma aplicação Web
+
+Crie uma pasta chamada **back-end** e coloque todos os arquivos feito até então:
+
+
+Para a aplicação Web funcionar precisamos instalar o react, abra um novo terminal e cole o código abaixo:
+```
+sudo npm install -g create-react-app
+```
+
+Então volte para o diretório **trip-rating** e digite:
+```
+create-react-app front-end
+```
+
 
 
 

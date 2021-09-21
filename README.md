@@ -93,10 +93,6 @@ Parabéns, você fez o deploy do smart contract
 Agora precisamos confirmar se a transação foi gravada no Ganache. Abra a aba Transactions e verifique se a transação foi registrada:
 
 
-
-
-
-
 ## Instanciando Web3js
 
 Abra o arquivo _app.js_ no diretório **projeto-trip/src/** e faça as seguintes alterações:

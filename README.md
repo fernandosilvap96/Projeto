@@ -139,7 +139,7 @@ npm install --sabe semantic-ui-react
 Precisamos criar uma pasta para os componentes react dentro do diretório **src** e nessa pasta vamos colocar os arquivos do **projeto-trip**:
 
 
-
+ALTERAR OS ARQUIVOS HOME.JS E VIAGEM.JS
 
 
 

@@ -134,7 +134,7 @@ Agora vamos baixar os pacotes react:
 npm install --save react-router-dom@4.3.1
 ```
 ```
-npm install --sabe semantic-ui-react
+npm install --save semantic-ui-react
 ```
 Precisamos criar uma pasta para os componentes react dentro do diretório **src** e nessa pasta vamos colocar os arquivos do **projeto-trip**:
 

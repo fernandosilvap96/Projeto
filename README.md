@@ -136,7 +136,7 @@ npm install --save react-router-dom@4.3.1
 ```
 npm install --save semantic-ui-react
 ```
-Precisamos criar uma pasta para os componentes react dentro do diretório **src** e nessa pasta vamos colocar os arquivos do **voting**:
+Precisamos criar uma pasta para os componentes react dentro do diretório **src** e nessa pasta vamos colocar os arquivos do **projeto-voting**:
 
 
 ALTERAR OS ARQUIVOS HOME.JS E VIAGEM.JS

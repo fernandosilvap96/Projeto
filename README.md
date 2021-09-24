@@ -1,4 +1,4 @@
-<h1 align="center">Projeto - Avaliação de pontos turísticos usando a tecnologia Blockchain</h1>
+<h1 align="center">Projeto - Votação usando a tecnologia Blockchain</h1>
 
 Aprenda como desenvolver uma aplicação descentralizada (DApp) utilizando as tecnologias Truffle, Ganache, Metamask, Web3js React.
 
@@ -9,13 +9,13 @@ Abaixo o Roadmap que ilustra as etapas do projeto.
 No projeto, criaremos um smart contract em solidity e faremos o deploy dele pelo Truffle, o deploy será na Blockchain criada pelo Ganache.
 Utilizaremos o Metamask para fazer a comunicação com a Blockchain e o React para criar a interface web da aplicação. 
 
-A aplicação vai simular um sistema de avaliação de pontos turísticos, onde qualquer usuário poderá cadastrar um novo ponto turístico usando como base a localização no google maps. Na avaliação o usuário deverá considerar alguns aspectos como paisagem, preço, segurança, acessibilidade, um breve resumo da experiência e por fim se recomenda ou não a visita.
+A aplicação vai simular um sistema de votação, onde qualquer usuário poderá cadastrar uma nova opção de votação e votar nas opções já existentes.
 
 
 ## Deploy do Smart Contract
 
 Para o deploy do projeto será necessário instalar o Visual Studio Code(link), Truffle(link), Ganache(link) e baixar o smart contract.
-Você pode encontrar a pasta **projeto-trip** contendo o smart contract com o nome de _Viagem.sol_ nesse link. 
+Você pode encontrar a pasta **projeto-voting** contendo o smart contract com o nome de _Voting.sol_ nesse link. 
 
 Para iniciar o projeto precisamos fazer o deploy do smart contract, siga os passos abaixo no terminal:
 
@@ -25,23 +25,23 @@ Para iniciar o projeto precisamos fazer o deploy do smart contract, siga os pass
 
 - 2º Crie uma pasta para o projeto:
 ```
-mkdir trip-rating
+mkdir voting
 ```
 - 3º Entre no diretório criado:
 ```
-cd trip-rating
+cd voting
 ```
-- 4º No diretório **trip-rating** inicialize o truffle:
+- 4º No diretório **voting** inicialize o truffle:
 ```
 truffle init
 ```
-- 5º Abra a pasta **trip-rating** no Visual Studio Code
+- 5º Abra a pasta **voting** no Visual Studio Code
 
 Note que o truffle criou algumas pastas, seu diretório deve estar assim:
 
 <img src="print1.png" alt="print1">
 
-- 6º Coloque o smart contract _Viagem.sol_ dentro da pasta **contracts**
+- 6º Coloque o smart contract _Voting.sol_ dentro da pasta **contracts**
 - 7º Voltando ao terminal, execute o comando:
 ```
 truffle compile
@@ -57,9 +57,9 @@ Note que o truffle criou uma pasta chamada **build**, dentro dela tem 2 arquivos
 
 - 9º No arquivo _2_deploy_contract.js_ cole o código abaixo:
 ```
-const Viagem = artifacts.require("ViagemContract");
+const Voting = artifacts.require("VotingContract");
 module.exports = function(deployer) {
-     deployer.deploy(Viagem);
+     deployer.deploy(Voting);
 };
 ```
 - 10º No arquivo _truffle-config.js_ cole o código abaixo:
@@ -109,7 +109,7 @@ Para a aplicação Web funcionar precisamos instalar o react, abra um novo termi
 sudo npm install -g create-react-app
 ```
 
-Então volte para o diretório **trip-rating** e digite:
+Então volte para o diretório **voting** e digite:
 ```
 create-react-app front-end
 ```
@@ -136,7 +136,7 @@ npm install --save react-router-dom@4.3.1
 ```
 npm install --save semantic-ui-react
 ```
-Precisamos criar uma pasta para os componentes react dentro do diretório **src** e nessa pasta vamos colocar os arquivos do **projeto-trip**:
+Precisamos criar uma pasta para os componentes react dentro do diretório **src** e nessa pasta vamos colocar os arquivos do **voting**:
 
 
 ALTERAR OS ARQUIVOS HOME.JS E VIAGEM.JS

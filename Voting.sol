@@ -5,7 +5,7 @@ contract VotingContract {
     
     event RegesteringCandidate(uint256 candidate_id,  string name, uint256 total_vote);
     event Voted(uint256 id);
-    event Fight(string fighter1, string fighter2);
+    ## event Fight(string fighter1, string fighter2);
     
     
     struct Candidate {
@@ -15,10 +15,6 @@ contract VotingContract {
         string image;
     }
     
-    struct Fighter {
-        string name;
-        uint256 votes;
-    }
     
     mapping(address => bool) public voters;
     mapping(uint => Candidate) public candidates;
@@ -42,17 +38,44 @@ contract VotingContract {
         voters[msg.sender] = true;
         candidates[_id].voteCount++;
         emit Voted(_id);
-        // ,Candidates[_id].vote_count
     }
     
-    function fight() public {
-        uint256 max_votes = 0;
+   ## function fighter1(string memory name, uint256 max_votes) public {
+
         
-        
-        
+        for(uint256 i=0; i< candidatesCount; i++){
+            if(max_votes < candidates[i].voteCount){
+                max_votes = candidates[i].voteCount;
+                name = candidates[i].name;
+            }
+            
+        }
     }
     
-   
+   ## function fighter2(string memory name, uint256 max_votes) public {
+
+        
+        for(uint256 i=0; i< candidatesCount; i++) {
+            if(max_votes < candidates[i].voteCount) {
+                max_votes = candidates[i - 1].voteCount;
+                name = candidates[i - 1].name;
+            }
+        }
+    }
+    
+   ## function fight(string memory fighter1, string memory fighter2) public {
+        
+        fighter1 = fighter1.name;
+        fighter2 = fighter2.name;
+        
+        emit fight(fighter1, fighter2);
+    }
+    
+    
+    
+    
+
+    
     
     
 }

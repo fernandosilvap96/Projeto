@@ -95,17 +95,11 @@ Se ocorrer tudo certo, receberemos o log abaixo no terminal:
 Parabéns, você fez o deploy do smart contract. Vamos analisar o que temos até aqui:
 
 - client/: arquivos React App para o front-end.
-
 - client/public/: arquivos web estáticos.
-
 - client/src/: arquivos source para o React App.
-
 - contracts/: Smart Contracts.
-
 - migrations/: instruções para a migração dos Smart Contracts.
-
 - test/: Test dos Smart Contracts
-
 - truffle-config.js: arquivo de configuração.
 
 Agora precisamos confirmar se a transação foi gravada no Ganache. Abra a aba Transactions e verifique se a transação foi registrada:

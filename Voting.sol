@@ -1,10 +1,12 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.7;
 
-contract VotingContract {
+contract Voting {
     
-    event RegesteringCandidate(uint256 candidate_id,  string name, uint256 total_vote);
+    event RegesteringCandidate(uint256 candidate_id,  string name, uint256 totalVotes);
     event Voted(uint256 id);
+    event Fight(string fighter1, string fighter2);
+    event totalVotes(uint totalVotes);
     
     struct Candidate {
         string name;
@@ -36,7 +38,19 @@ contract VotingContract {
         voters[msg.sender] = true;
         candidates[_id].voteCount++;
         emit Voted(_id);
-        // ,Candidates[_id].vote_count
-    }    
+        emit TotalVotes(candidates[_id].voteCount);
+    }
     
-}   
+    
+    function fight(uint256 _maxVotes, string memory _fighter) public {
+        require(candidates[_id].voteCount > 0)
+        
+    }
+
+    
+    
+
+    
+    
+    
+}

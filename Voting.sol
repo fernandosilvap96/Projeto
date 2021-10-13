@@ -3,16 +3,21 @@ pragma solidity ^0.8.7;
 
 contract Voting {
     
-    event RegesteringCandidate(uint256 candidate_id,  string name, uint256 totalVotes);
+    event RegesteringCandidate(uint256 candidate_id, string name, uint256 totalVotes);
     event Voted(uint256 id);
     event Fight(string fighter1, string fighter2);
-    event totalVotes(uint totalVotes);
+    event TotalVotes(string name, uint totalVotes);
     
     struct Candidate {
         string name;
         uint256 id;
         uint256 voteCount;
         string image;
+    }
+    
+    struct Fighter {
+        string name;
+        uint256 voteCount;
     }
     
     
@@ -38,19 +43,25 @@ contract Voting {
         voters[msg.sender] = true;
         candidates[_id].voteCount++;
         emit Voted(_id);
-        emit TotalVotes(candidates[_id].voteCount);
+        emit TotalVotes(candidates[_id].name, candidates[_id].voteCount);
     }
     
     
-    function fight(uint256 _maxVotes, string memory _fighter) public {
-        require(candidates[_id].voteCount > 0)
+    function fight(string memory _name, uint256 _voteCount) public {
+        
+        string memory fighter1 = "";
+        string memory fighter2 = "";
+        uint256 totalVotes = 0;
+        for (uint i=0; i < candidatesCount; i++) {
+            if (candidates[candidatesCount].voteCount > totalVotes) {
+                fighter1 = candidates[candidatesCount].name;
+                totalVotes += candidates[candidatesCount].voteCount;
+            } else {
+                fighter2 = candidates[candidatesCount].name;
+            }
+        }
+        
         
     }
-
-    
-    
-
-    
-    
     
 }

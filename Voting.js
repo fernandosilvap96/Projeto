@@ -1,26 +1,20 @@
 import React, { Component } from 'react';
 import { Button, Input, Table } from 'semantic-ui-react'
-import { createContract } from './../ethereum/leilaoContract'
+import { createContract } from './../ethereum/VotingContract'
 import { web3 } from './../ethereum/web3'
 
-export class Leilao extends Component {
+export class Voting extends Component {
 
   ONGOING_STATE = '0'
   FAILED_STATE = '1'
   SUCCEEDED_STATE = '2'
-  PAID_OUT_STATE = '3'
 
   state = {
-    campaign: {
+    winner: {
       name: 'N/A',
-      targetAmount: 0,
-      totalCollected: 0,
-      campaignFinished: false,
-      deadline: new Date(0),
-      isBeneficiary: false,
+      id: ''
       state: ''
     },
-    contributionAmount: '0'
   }
 
   constructor(props) {
@@ -36,24 +30,17 @@ export class Leilao extends Component {
     })
   }
 
-  getCampaignAddress() {
+  getUserAddress() {
     return this.props.match.params.address
   }
 
-  async getCampaign(address) {
+  async getVoting(address) {
     const contract = createContract(address)
 
     // Coleta os dados da Blockchain
     const name = await contract.methods.name().call()
-    const targetAmount = await contract.methods.targetAmount().call()
-    const totalCollected = await contract.methods.totalCollected().call()
-    const beforeDeadline = await contract.methods.beforeDeadline().call()
-    const beneficiary = await contract.methods.beneficiary().call()
-    const deadlineSeconds = await contract.methods.fundingDeadline().call()
+    const id = await contract.methods.id().call()
     const state = await contract.methods.state().call()
-
-    var deadlineDate = new Date(0);
-    deadlineDate.setUTCSeconds(deadlineSeconds)
 
     const accounts = await web3.eth.getAccounts(console.log)
 

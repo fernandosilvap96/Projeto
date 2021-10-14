@@ -5,7 +5,6 @@ contract Voting {
     
     event RegesteringCandidate(uint256 candidate_id, string name, uint256 totalVotes);
     event Voted(uint256 id);
-    event Fight(string fighter1, string fighter2);
     event TotalVotes(string name, uint totalVotes);
     
     struct Candidate {
@@ -13,11 +12,6 @@ contract Voting {
         uint256 id;
         uint256 voteCount;
         string image;
-    }
-    
-    struct Fighter {
-        string name;
-        uint256 voteCount;
     }
     
     
@@ -47,21 +41,15 @@ contract Voting {
     }
     
     
-    function fight(string memory _name, uint256 _voteCount) public {
+    function getLider() public view returns (string memory _name, uint256 _totalVotes) {
         
-        string memory fighter1 = "";
-        string memory fighter2 = "";
-        uint256 totalVotes = 0;
         for (uint i=0; i < candidatesCount; i++) {
-            if (candidates[candidatesCount].voteCount > totalVotes) {
-                fighter1 = candidates[candidatesCount].name;
-                totalVotes += candidates[candidatesCount].voteCount;
+            if (candidates[candidatesCount].voteCount > _totalVotes) {
+                _name = candidates[candidatesCount].name;
+                _totalVotes += candidates[candidatesCount].voteCount;
             } else {
-                fighter2 = candidates[candidatesCount].name;
+                
             }
         }
-        
-        
+
     }
-    
-}

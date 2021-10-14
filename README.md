@@ -147,7 +147,7 @@ Devemos ter a tela assim:
 Agora vamos baixar os pacotes react:
 ```
 npm install --save react-router-dom@4.3.1
-```
+
 ```
 npm install --save semantic-ui-react
 ```

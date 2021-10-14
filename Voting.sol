@@ -5,7 +5,6 @@ contract Voting {
     
     event RegesteringCandidate(uint256 candidate_id, string name, uint256 totalVotes);
     event Voted(uint256 id);
-    event TotalVotes(string name, uint totalVotes);
     
     struct Candidate {
         string name;
@@ -37,7 +36,6 @@ contract Voting {
         voters[msg.sender] = true;
         candidates[_id].voteCount++;
         emit Voted(_id);
-        emit TotalVotes(candidates[_id].name, candidates[_id].voteCount);
     }
     
     

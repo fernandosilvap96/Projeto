@@ -39,8 +39,7 @@ contract Voting {
     }
     
     
-    function getLider() public view returns (string memory _name, uint256 _totalVotes) {
-        
+    function getLeader() public view returns (string memory _name, uint256 _totalVotes) {
         for (uint i=0; i < candidatesCount; i++) {
             if (candidates[i].voteCount > _totalVotes) {
                 _name = candidates[i].name;
@@ -50,7 +49,13 @@ contract Voting {
             
             }
         }
-
+    }
+    
+    function fight(string memory _challenger, string memory _challenged) public {
+      
+      
+        
+        
     }
 
     

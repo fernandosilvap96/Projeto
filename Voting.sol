@@ -44,12 +44,16 @@ contract Voting {
     function getLider() public view returns (string memory _name, uint256 _totalVotes) {
         
         for (uint i=0; i < candidatesCount; i++) {
-            if (candidates[candidatesCount].voteCount > _totalVotes) {
-                _name = candidates[candidatesCount].name;
-                _totalVotes += candidates[candidatesCount].voteCount;
+            if (candidates[i].voteCount > _totalVotes) {
+                _name = candidates[i].name;
+                _totalVotes += candidates[i].voteCount;
             } else {
-                
+            
+            
             }
         }
 
     }
+
+    
+}
